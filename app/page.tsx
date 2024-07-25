@@ -1,6 +1,6 @@
 import { db } from "@/db";
 
-export default async function Home({ params }: { params: { user: string } }) {
+export default async function Home() {
   const rows = await db.query.users.findMany();
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
